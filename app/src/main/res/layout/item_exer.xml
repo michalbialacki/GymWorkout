@@ -31,13 +31,4 @@
         app:layout_constraintWidth_percent="0.35" />
 
 
-        <CheckBox
-            android:id="@+id/cbDone"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tvExName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintWidth_percent="0.2"
-            android:visibility="invisible"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

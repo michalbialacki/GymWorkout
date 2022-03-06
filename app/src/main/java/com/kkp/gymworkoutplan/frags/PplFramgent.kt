@@ -14,17 +14,15 @@ import com.kkp.gymworkoutplan.Adapters.PplExecAdapter
 import com.kkp.gymworkoutplan.WorkoutInter
 import com.kkp.gymworkoutplan.WorkoutViewModel
 import com.kkp.gymworkoutplan.databinding.FragmentPplFramgentBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
 class PplFramgent : Fragment(), WorkoutInter {
     private lateinit var _binding : FragmentPplFramgentBinding
     private val binding get() = _binding
     private lateinit var viewModel : WorkoutViewModel
+    val TAG = "Fragment"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,16 +42,14 @@ class PplFramgent : Fragment(), WorkoutInter {
         val adapter = PplExecAdapter(exerList,this)
         binding.rvExer.adapter = adapter
         binding.rvExer.layoutManager = LinearLayoutManager(requireContext())
-        lifecycleScope.launchWhenStarted {
-            viewModel.membersList.collectLatest {
-                withContext(Dispatchers.Main){
-                    binding.tvPplText.text = "${it}"
+        lifecycleScope.launchWhenCreated {
+            withContext(Dispatchers.Main){
+                viewModel.buddyState.collectLatest {
+                    delay(100L)
+                    binding.tvPplText.text = "${viewModel.membersList.value[it]}"
                 }
-
-
             }
         }
-
         return view
     }
 
