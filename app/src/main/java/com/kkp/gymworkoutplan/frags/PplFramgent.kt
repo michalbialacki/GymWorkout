@@ -47,6 +47,10 @@ class PplFramgent : Fragment(), WorkoutInter {
                 viewModel.buddyState.collectLatest {
                     delay(100L)
                     binding.tvPplText.text = "${viewModel.membersList.value[it]}"
+                    withContext(Dispatchers.Main){
+                        binding.rvExer.adapter = adapter
+                        binding.rvExer.layoutManager = LinearLayoutManager(requireContext())
+                    }
                 }
             }
         }

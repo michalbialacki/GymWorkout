@@ -12,16 +12,16 @@
         "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_mix.png.flat",
-        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\drawable-xxhdpi\\ic_mix.png"
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_mix.xml.flat",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\fragment_mix.xml"
     },
     {
         "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ic_pplegs.png.flat",
         "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\drawable-mdpi\\ic_pplegs.png"
     },
     {
-        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_mix.xml.flat",
-        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\fragment_mix.xml"
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_ic_mix.png.flat",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\drawable-xxhdpi\\ic_mix.png"
     },
     {
         "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
