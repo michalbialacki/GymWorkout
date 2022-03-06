@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "599746356141",
+    "project_id": "gymworkoutplan-73f54",
+    "storage_bucket": "gymworkoutplan-73f54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599746356141:android:377bf551d072db00a1f724",
+        "android_client_info": {
+          "package_name": "com.KKP.gymworkoutplan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599746356141-ju8o0gtjm76ljgj211v2fmt83213d7qg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHg37l2w6phkLcD7mw2ct7P8rNu58Zcag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599746356141-ju8o0gtjm76ljgj211v2fmt83213d7qg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

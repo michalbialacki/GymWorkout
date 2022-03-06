@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GymWorkoutPlan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="excname">ExcName</string>
+    <string-array name="Push">
+        <item>Bench Press</item>
+        <item>Incline Dumbell Press</item>
+        <item>Floor Press</item>
+        <item>Bar Push-ups</item>
+        <item>Military Press</item>
+        <item>Standing Shoulder Flys</item>
+        <item>Barbell Front Raises </item>
+        <item>Rope Pushdowns</item>
+        <item>Overhead Triceps Extensions</item>
+        <item>Skull Crushers</item>
+    </string-array>
+</resources>

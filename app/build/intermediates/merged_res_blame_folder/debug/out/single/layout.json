@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_exer.xml",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\item_exer.xml"
+    },
+    {
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_split.xml",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\fragment_split.xml"
+    },
+    {
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mix.xml",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\fragment_mix.xml"
+    },
+    {
+        "merged": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ppl_framgent.xml",
+        "source": "D:\\PK\\AS1\\GymWorkoutPlan\\app\\src\\main\\res\\layout\\fragment_ppl_framgent.xml"
+    }
+]
