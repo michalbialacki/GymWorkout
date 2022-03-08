@@ -8,18 +8,23 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.kkp.gymworkoutplan.MainActivity
 import com.kkp.gymworkoutplan.R
 import com.kkp.gymworkoutplan.WorkoutInter
+import com.kkp.gymworkoutplan.WorkoutViewModel
+import com.kkp.gymworkoutplan.databinding.ItemExerBinding
 
 class PplExecAdapter (var excercises : List<PplExec>, val positionListener : WorkoutInter ) : RecyclerView.Adapter<PplExecAdapter.PplExecViewHolder>() {
-    inner class PplExecViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-        val title : TextView = itemView.findViewById(R.id.tvExName)
-        val progressBar : ProgressBar = itemView.findViewById(R.id.pbSeriesDone)
 
+    inner class PplExecViewHolder(val binding: ItemExerBinding) : RecyclerView.ViewHolder(binding.root){
         fun getPositionOut(positionListener: WorkoutInter){
             itemView.setOnClickListener {
-                ObjectAnimator.ofInt(progressBar,"progress",excercises[position].progress + 25).start()
+                ObjectAnimator.ofInt(binding.pbSeriesDone
+                    ,"progress"
+                    ,excercises[position].progress + 25)
+                    .start()
                 positionListener.onExcerciseClicked(position)
             }
 
@@ -29,13 +34,19 @@ class PplExecAdapter (var excercises : List<PplExec>, val positionListener : Wor
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PplExecViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_exer, parent,false)
-        return PplExecViewHolder(view)
+        return PplExecViewHolder(ItemExerBinding.inflate(LayoutInflater
+            .from(parent.context)
+            ,parent
+            ,false))
     }
 
     override fun onBindViewHolder(holder: PplExecViewHolder, position: Int) {
-        holder.apply{
-            title.text = excercises[position].title
-            progressBar.progress = excercises[position].progress
+        holder.binding.apply {
+            tvExName.text = excercises[position].title
+            pbSeriesDone.progress = excercises[position].progress
+            tvWeigth.text = "${excercises[position].mass}"
+        }
+        holder.apply {
             getPositionOut(positionListener)
         }
     }

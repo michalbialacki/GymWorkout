@@ -22,14 +22,11 @@ class PplFramgent : Fragment(), WorkoutInter {
     private lateinit var _binding : FragmentPplFramgentBinding
     private val binding get() = _binding
     private lateinit var viewModel : WorkoutViewModel
-    val TAG = "Fragment"
+    val TAG = "Fragment PPL"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(WorkoutViewModel::class.java)
-//        lifecycleScope.launchWhenCreated {
-//            viewModel.createExeList()
-//        }
     }
 
     override fun onCreateView(
@@ -46,11 +43,12 @@ class PplFramgent : Fragment(), WorkoutInter {
             withContext(Dispatchers.Main){
                 viewModel.buddyState.collectLatest {
                     delay(100L)
-                    binding.tvPplText.text = "${viewModel.membersList.value[it]}"
-                    withContext(Dispatchers.Main){
-                        binding.rvExer.adapter = adapter
-                        binding.rvExer.layoutManager = LinearLayoutManager(requireContext())
+                    var member = viewModel.membersList.value[it]
+                    exerList.forEachIndexed { index, pplExec ->
+                        pplExec.mass = member.chestPressPR
+                        adapter.notifyItemChanged(index)
                     }
+                    binding.tvPplText.text = "${member}"
                 }
             }
         }
@@ -59,15 +57,7 @@ class PplFramgent : Fragment(), WorkoutInter {
 
     override fun onStart() {
         super.onStart()
-//        lifecycleScope.launchWhenCreated {
-//            viewModel.membersList.collectLatest {
-//                withContext(Dispatchers.Main){
-//                    binding.tvPplText.text = "${it[viewModel.buddyState.value]}"
-//                }
-//
-//
-//            }
-//        }
+
     }
 
     override fun onPause() {
@@ -81,7 +71,7 @@ class PplFramgent : Fragment(), WorkoutInter {
 
 
     override fun onExcerciseClicked(position: Int) {
-        lifecycleScope.launch(Dispatchers.IO) {
+        GlobalScope.launch(Dispatchers.IO) {
             viewModel.updatePosition(position)
             Log.d("CHECKBUTTON", "$position")
             viewModel.updateExeList(position)
